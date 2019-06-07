@@ -9,7 +9,7 @@ module.exports = {
     excludeExternals: true,
     excludeNotExported: true,
     readme: "README.md",
-    name: "Collection",
+    name: "<module-name>",
     ignoreCompilerErrors: true,
     listInvalidSymbolLinks: true
 };
