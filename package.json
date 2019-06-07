@@ -1,0 +1,63 @@
+{
+    "name": "ts-workspace",
+    "version": "1.0.0",
+    "description": "A starting workspace for typescript projects",
+    "license": "MIT",
+    "main": "lib/index",
+    "module": "lib/index.mjs",
+    "types": "lib/index.d.ts",
+    "engines": {
+        "node": ">=10.x"
+    },
+    "files": [
+        "lib"
+    ],
+    "author": {
+        "name": "Pepijn van den Broek <KurozeroPB>",
+        "email": "root@kurozeropb.info",
+        "url": "https://kurozeropb.info"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KurozeroPB/<repo>.git"
+    },
+    "homepage": "https://kurozeropb.github.io/<repo>/",
+    "bugs": {
+        "email": "bugs@kurozeropb.info",
+        "url": "https://github.com/KurozeroPB/<repo>/issues"
+    },
+    "keywords": [],
+    "scripts": {
+        "prepare": "yarn run rollup:build && yarn run types:generate",
+        "rollup:build": "rollup -c",
+        "rollup:watch": "yarn run rollup:build -- --watch",
+        "types:generate": "dts-bundle-generator -o lib/index.d.ts src/index.ts",
+        "test": "yarn test:mocha && yarn test:tslint && yarn test:eslint",
+        "test:mocha": "mocha -r ts-node/register src/test/**/*.ts",
+        "test:tslint": "tslint -p ./",
+        "docs": "typedoc && cp .nojekyll docs/",
+        "gts:check": "gts check",
+        "gts:clean": "gts clean",
+        "gts:fix": "gts fix",
+        "test:eslint": "eslint --ext .ts .",
+        "eslint:fix": "eslint --ext .ts --fix ."
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@types/chai": "^4.1.7",
+        "@types/mocha": "^5.2.7",
+        "@typescript-eslint/eslint-plugin": "^1.9.0",
+        "@typescript-eslint/parser": "^1.9.0",
+        "chai": "^4.2.0",
+        "dts-bundle-generator": "^3.1.0",
+        "eslint": "^5.16.0",
+        "gts": "^1.0.0",
+        "mocha": "^6.1.4",
+        "rollup": "^1.13.1",
+        "rollup-plugin-typescript": "^1.0.1",
+        "ts-node": "^8.2.0",
+        "tslib": "^1.9.3",
+        "tslint": "^5.17.0",
+        "typescript": "^3.5.1"
+    }
+}

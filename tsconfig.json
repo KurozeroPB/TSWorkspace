@@ -1,0 +1,24 @@
+{
+    "extends": "./node_modules/gts/tsconfig-google.json",
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "commonjs",
+        "lib": [
+            "esnext"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "declaration": true,
+        "sourceMap": false,
+        "strict": true,
+        "rootDir": ".",
+        "outDir": "lib"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
