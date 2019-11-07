@@ -6,3 +6,6 @@ A starting workspace for typescript projects
 
 - install dependencies \
 `yarn install`
+
+## Support
+![discord](https://discordapp.com/api/v6/guilds/240059867744698368/widget.png?style=banner2)
