@@ -1,4 +1,4 @@
-# TSWorkspace
+# typescript-template
 A starting workspace for typescript projects
 
 - clone repo \

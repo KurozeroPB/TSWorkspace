@@ -4,21 +4,22 @@
         "target": "esnext",
         "module": "commonjs",
         "lib": [
-            "esnext"
+            "esnext",
+            "dom"
         ],
         "typeRoots": [
             "node_modules/@types"
         ],
         "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
         "declaration": true,
-        "sourceMap": false,
+        "outDir": "lib",
         "strict": true,
-        "rootDir": ".",
-        "outDir": "lib"
+        "esModuleInterop": true
     },
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "lib",
+        "**/*.test.ts",
+        "**/webpack.config.ts"
     ]
 }
